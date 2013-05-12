@@ -105,10 +105,16 @@ class vim::plugins {
   exec {'git clone https://github.com/altercation/vim-colors-solarized.git /home/vagrant/.vim/bundle/vim-colors-solarized':
     creates => '/home/vagrant/.vim/bundle/vim-colors-solarized',
   }
+  exec {'git clone https://github.com/MarcWeber/vim-addon-mw-utils.git /home/vagrant/.vim/bundle/vim-addon-mw-utils':
+    creates => '/home/vagrant/.vim/bundle/vim-addon-mw-utils',
+  }
 }
 
 class vim::config {
   file {'/home/vagrant/.vimrc':
     source => 'puppet:///modules/vim/.vimrc',
+    owner => 'vagrant',
+    group => 'vagrant',
+    mode => 0664,
   }
 }
