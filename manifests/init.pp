@@ -63,6 +63,7 @@ class vim::plugins {
     ensure => directory,
     owner => 'vagrant',
     group => 'vagrant',
+    recurse => true,
     mode => 0664,
   }
   exec { "/usr/bin/curl 'www.vim.org/scripts/download_script.php?src_id=19375' > /home/vagrant/.vim/autoload/pathogen.vim":
