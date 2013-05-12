@@ -78,7 +78,7 @@ class vim::plugins {
   exec {'git clone https://github.com/tpope/vim-surround.git /home/vagrant/.vim/bundle/vim-surround':
     creates => '/home/vagrant/.vim/bundle/vim-surround',
   }
-  exec {'git clone https://github.com/joonty/vdebug.gith /home/vagrant/.vim/bundle/vdebug':
+  exec {'git clone https://github.com/joonty/vdebug.git /home/vagrant/.vim/bundle/vdebug':
     creates => '/home/vagrant/.vim/bundle/vdebug',
   }
   exec {'git clone https://github.com/scrooloose/syntastic.git /home/vagrant/.vim/bundle/syntastic':
