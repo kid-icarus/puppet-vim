@@ -40,7 +40,7 @@ class vim::install {
     group => 'root',
     recurse => true,
   } ->
-  exec {"cd /home/vagrant/vim73 && ./configure --disable-selinux --enable-luainterp --enable-perlinterp --enable-pythoninterp --enable-tclinterp --enable-rubyinterp --enable-multibyte --disable-gui --with-features=huge && make && make install":
+  exec {"cd /home/vagrant/vim73 && ./configure --disable-selinux --enable-luainterp --enable-perlinterp --enable-pythoninterp --enable-tclinterp --enable-rubyinterp --enable-multibyte --disable-gui --with-features=huge --with-python-config-dir=/usr/local/lib/python2.7/config && make && make install":
     provider => 'shell',
     creates => '/usr/local/bin/vim',
   }
