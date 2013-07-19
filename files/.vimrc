@@ -18,6 +18,7 @@ set foldlevelstart=99
 
 " Set colorscheme
 colorscheme solarized
+hi Normal ctermbg=NONE
 
 "call togglebg#map("<F5>")
 " Mapping to switch light/dark background
